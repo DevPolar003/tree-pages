@@ -2,6 +2,8 @@ package dev.morgan.treepages.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 
 @Table(name = "Reader")
 @Entity(name = "Reader")
@@ -17,6 +19,9 @@ public class Reader {
     private Integer streakDays;
     @Column (name = "total_minutes_read")
     private Integer totalMinutesRead;
+
+    @OneToMany(mappedBy = "reader")
+    private List<Garden> gardens;
 
     public Long getId() {
         return id;
