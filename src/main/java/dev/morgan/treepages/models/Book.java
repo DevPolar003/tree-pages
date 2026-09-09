@@ -12,7 +12,12 @@ public class Book {
     private String title;
     private String author;
     private Integer pageCount;
+    @Column(name = "reading_status")
     @Enumerated(EnumType.STRING)
     private ReadingStatus status;
+    @ManyToOne // MANY books belong to ONE reader
+    private Reader reader;
+    @ManyToOne  // MANY books belong to ONE garden
+    private Garden garden;
 
 }

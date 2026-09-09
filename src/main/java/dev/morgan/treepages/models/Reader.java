@@ -19,7 +19,6 @@ public class Reader {
     private Integer streakDays;
     @Column (name = "total_minutes_read")
     private Integer totalMinutesRead;
-
     @OneToMany(mappedBy = "reader")
     private List<Garden> gardens;
 
