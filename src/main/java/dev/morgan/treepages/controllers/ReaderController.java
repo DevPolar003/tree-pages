@@ -1,5 +1,7 @@
 package dev.morgan.treepages.controllers;
 
+import dev.morgan.treepages.dtos.ReaderRequest;
+import dev.morgan.treepages.dtos.ReaderResponse;
 import dev.morgan.treepages.models.Reader;
 import dev.morgan.treepages.services.ReaderService;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,13 +20,13 @@ public class ReaderController {
         }
 
         @GetMapping
-        public List<Reader> getAll() {
+        public List<ReaderResponse> getAll() {
             return service.getAll();
         }
 
         @PostMapping
-        public Reader create(@RequestBody Reader reader) {
-            return service.save(reader);
+        public Reader create(@RequestBody ReaderRequest request) {
+            return service.save(request);
         }
     }
 

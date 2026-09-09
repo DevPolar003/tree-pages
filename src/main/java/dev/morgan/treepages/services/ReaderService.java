@@ -1,4 +1,6 @@
 package dev.morgan.treepages.services;
+import dev.morgan.treepages.dtos.ReaderRequest;
+import dev.morgan.treepages.dtos.ReaderResponse;
 import dev.morgan.treepages.models.Reader;
 import dev.morgan.treepages.repositories.ReaderRepository;
 import org.springframework.stereotype.Service;
@@ -13,11 +15,20 @@ public class ReaderService {
         this.repository = repository;
     }
 
-    public List<Reader> getAll() {
-        return repository.findAll();
+    public List<ReaderResponse> getAll() {
+        return repository.findAll()
+                .stream()
+                .map(reader -> new ReaderResponse(
+                        reader.getId(),
+                        reader.getName(),
+                        reader.getEmail()
+                ))
+                .toList();
     }
 
-    public Reader save(Reader reader) {
+    public Reader save(ReaderRequest request) {
+        Reader reader = new Reader();
+        reader.setName(request.username());
         return repository.save(reader);
     }
 }
