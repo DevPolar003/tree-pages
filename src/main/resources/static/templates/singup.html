@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sing up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="container-fluid min-vh-100">
+        <div class="row min-vh-100 justify-content-center align-items-center">
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center">
+                <form action="/post/newusr" class="justify-content-center align-items-center d-flex flex-column">
+                    <h1 class="mt-5">Happy to see you <span class="title_welcome">New user!</span></h1>
+                    <div class="d-grid gap-4 mt-5 justify-content-center align-items-center flex-column d-flex">
+
+                        <input   type="input" class="inputs" placeholder="name" type="text">
+                        <input   type="email" class="inputs"  placeholder="email" type="text" required>
+                        <input  type="password" class="inputs"  placeholder="password" type="password">
+                        <input type="submit" class="buttons_welcome " id="submit" value="submit">
+                        <a class="text-center buttons_welcome  d-flex align-items-center justify-content-center" href="/welcome.html">voltar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

@@ -3,16 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Library</title>
+    <title>Welcome</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <h1 id="welcomeTitle">Welcome to TreePages</h1>
-    <img src="" alt="books img">
-    <button class="buttons_welcome"><a href="/templates/login.html">Start reading!</a></button>
-    <button class="buttons_welcome"><a href="/templates/login.html">Sing up</a></button>    
-    <button><a href="/templates/forget_password.html">I forget my password</a></button>
+    <div class="container-fluid vh-min-100">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-10 col-sm-8 col-lg-4 col-md-6 d-flex flex-column align-items-center">
+          <h1 class="text-center mb-5 mt-5">Welcome to <span class="title_welcome">TreePages!</span></h1>
+          <img class="mt-5 p-5 mb-5" id="book_img_welcome" src="/assets/book-stack.png" alt="book_img">
+          <div class="d-grid gap-3 mt-5">
+            <button class="buttons_welcome"><a href="/templates/login.html">Start Reading</a></button>
+            <button class="buttons_welcome"><a href="/templates/singup.html">Sing up</a></button>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 

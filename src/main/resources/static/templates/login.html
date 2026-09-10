@@ -1,22 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Library</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    <form action="#">
 
-      <h1>Welcome back to TreePages</h1>
-      <button><a href="/welcome.html">voltar</a></button>
-      <input class="login_input" id="email" type="text">
-      <input class="login_input" id="pass" type="password">
-      <input type="submit" value="submit">
-    </form>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="/js/script.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TreePages</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <!--container-fluid = takes the entire width of the screen
+        min-vh-100      = minimum height is 100% of the viewport-->
+  <div class="container-fluid min-vh-100">
+    <div class="row justify-content-center align-items-center min-vh-100">
+      <div class="col-10 col-sm-8 col-md-6 col-lg-4 d-flex flex-column">
+
+        <h1 class="text-center mb-5"> Welcome back to <span class="title_welcome"> TreePages!</span></h1>
+
+        <form action="/auth/login" method="POST" class="d-flex justify-content-center align-items-center flex-column ">
+          <input id="email" type="email" class="inputs mb-5" placeholder="email" required>
+          <input id="password" type="password" class="inputs mb-5" placeholder=" password" required>
+          <button type="submit" class="buttons_welcome mb-3">Dive in!</button>
+          <a href="/welcome.html" class="buttons_welcome mb-5 d-flex align-items-center justify-content-center">Back</a>
+          <a href="/templates/forget_password.html"> I forgot my password</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="/js/script.js"></script>
+
+</body>
+
 </html>

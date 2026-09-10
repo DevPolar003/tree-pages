@@ -1,21 +1,85 @@
-*{
-    padding: 0;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+
+:root {
+    --color-primary: #7fb77e;
+    --color-secondary: #a8d5ba;
+    --color-success: #b7e4c7;
+
+    --color-background: #fcfcf8;
+    --color-surface: #f7f7f2;
+    --color-accent: #f6f7eb;
+
+    --color-text: #6b7280;
+    --color-text-dark: #374151;
+
+    --color-warning: #ffb300;
+    --color-warning-streak: #ffd97d;
 }
 
+/* general config */
 
-#add_book_button{
-    height: 50px;
-    width:  80px;
-    color: white;
-    background: rgb(96, 168, 96);
+body {
+    font-family: 'Gotu', serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+}
+
+a {
+    color: #121416;
+    text-decoration: none;
+}
+
+/*welcome session */
+
+.title_welcome{
+    color: #4d724c;
+}
+
+#book_img_welcome{
+    
+    height: 300px;
+    width: 300px;
+}
+
+.buttons_welcome{
+    width: 250px;
+    height: 100px;
+    border-radius: 20px;
     border: none;
-    border-radius: 15px;
-    transition-duration: 0.5s;
+    background-color: #7fb77e;
+    text-align: center;
+    transition-duration: 0.3s;
 }
 
-#add_book_button:hover{
-    transition-duration: 0.5s ;
-    background-color: rgb(51, 199, 51);
+.buttons_welcome:hover{
+    transition-duration: 0.3s ;
+    background-color: rgb(104, 192, 104);
     border: 20px;
 }
+
+
+/*login session */
+
+.inputs{
+    width: 500px;
+    height: 90px;
+    border: none;
+    color: var(--color-text);
+    background-color: var(--color-secondary);
+    border-radius: 12px;
+    transition: 0.3s;
+    padding-left: 15px;
+
+}
+
+.inputs:hover{
+    color: #a4431d;
+    
+}
+
+.inputs:focus {
+    outline: none;
+    border: none;
+    color: #a4431d;
+}
+
