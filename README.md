@@ -29,17 +29,19 @@ Tree Pages is an application designed to improve reading comprehension and reten
 - [x] Project setup
 - [x] PostgreSQL configuration
 - [x] Flyway configuration
-
+- [x] Fix the database structure
 ### Currently Working On
 - DTO's and Migrations
 
 ### Next Task
-- [ ] Fix the database structure
-- [ ] Create all the restAPI structure
+- [ ] auth and jwt
+- [ ] password hash
+- [ ] DTO's
+- [ ] book CRUD's
+- [ ] read book
 
-
-### Known Problems
-- Core structure 
+ Known Problems
+ - None
 
 ### Architecture
 - Controller
