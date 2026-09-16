@@ -1,3 +1,4 @@
 package dev.morgan.treepages.models;
 
-public class CoinTransaction {}
+public class CoinTransaction {
+}

@@ -10,15 +10,17 @@ import java.util.List;
 public class Reader {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
-    private Integer wallet;
-    @Column (name = "streak_days")
-    private Integer streakDays;
-    @Column (name = "total_minutes_read")
-    private Integer totalMinutesRead;
+    @Column(name = "password_hash")
+    private String password;
+    private Integer wallet = 0;
+    @Column(name = "streak_days")
+    private Integer streakDays = 0;
+    @Column(name = "total_minutes_read")
+    private Integer totalMinutesRead = 0;
     @OneToMany(mappedBy = "reader")
     private List<Garden> gardens;
 
@@ -36,6 +38,14 @@ public class Reader {
 
     public void setName(String name) {
         this.nome = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {

@@ -4,7 +4,7 @@ import dev.morgan.treepages.enums.ReadingStatus;
 import jakarta.persistence.*;
 
 @Entity
-@Table (name = "Book")
+@Table(name = "Book")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
