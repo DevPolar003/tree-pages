@@ -37,25 +37,43 @@ active reading strategies.
 
 ### Next Task
 
-- [ ] Fix the database structure
-- [ ] Create all the restAPI structure
-
-### Known Problems
-
-- Core structure
-
-### Architecture
-
-- Controller
-- Service
-- Repository
-- Entity
+- [x] Fix the database structure
+- [x] Create all the restAPI structure
 
 
+## Running TreePages locally
+
+### Requirements
+
+Before running TreePages, make sure you have:
+
+- Java 25
+- Maven
+- Docker
+- Docker Compose
+- IntelliJ IDEA
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/DevPolar003/tree-pages.git
+cd tree-pages
 
 
+```
 
+## 2. Terminal
 
+```bash
+Start the docker:
+docker compose up -d
+
+Check if it's working:
+docker compose ps
+```
+
+## 3. Build the project
+Run the project on Intellj Idea and access the endpoints.
 
 
 
