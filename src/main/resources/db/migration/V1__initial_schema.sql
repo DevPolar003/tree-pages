@@ -4,14 +4,15 @@ CREATE TYPE theme AS ENUM ('FOREST', 'JAPANESE', 'TROPICAL', 'DESERT');
 CREATE TYPE tree_type AS ENUM ('QUARESMEIRA', 'JACARANDA', 'SIBIPURUNA', 'PAU_BRASIL', 'IPE_BRANCO', 'EUCALIPTO');
 CREATE TYPE transaction_type AS ENUM ('SPENT', 'EARNED');
 
-
-CREATE TABLE Reader (
-                        id                 BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-                        nome               VARCHAR(200)             NOT NULL,
-                        email              VARCHAR(100)             NOT NULL UNIQUE,
-                        wallet             NUMERIC(10, 2) DEFAULT 0 NOT NULL CHECK (wallet >= 0),
-                        streak_days        INT            DEFAULT 0 CHECK (streak_days >= 0),
-                        total_minutes_read INT            DEFAULT 0 CHECK (total_minutes_read >= 0)
+CREATE TABLE reader
+(
+    id                 BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    nome               VARCHAR(200) NOT NULL,
+    email              VARCHAR(100) NOT NULL UNIQUE,
+    password_hash      VARCHAR(255) NOT NULL,
+    wallet             NUMERIC(10, 2) DEFAULT 0 NOT NULL CHECK (wallet >= 0),
+    streak_days        INT DEFAULT 0 CHECK (streak_days >= 0),
+    total_minutes_read INT DEFAULT 0 CHECK (total_minutes_read >= 0)
 );
 
 CREATE TABLE Garden (
