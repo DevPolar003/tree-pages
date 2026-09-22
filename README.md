@@ -54,7 +54,7 @@ Before running Tree Pages, ensure you have the following installed:
 
 **1. Clone the repository**
 ```bash
-git clone [https://github.com/DevPolar003/tree-pages.git](https://github.com/DevPolar003/tree-pages.git)
+git clone https://github.com/DevPolar003/tree-pages
 
 cd tree-pages
 ```
