@@ -1,79 +1,81 @@
-# Tree pages
+# Tree Pages
 
-Tree Pages is an application designed to improve reading comprehension and retention using the Pomodoro technique and
-active reading strategies.
+Tree Pages is an application designed to improve reading comprehension and retention by combining the Pomodoro technique with active reading strategies.
 
-## Future features
-
-- Pomodoro clock
-- Book garden
-- Library
-- Streak page
-- Profile
+---
 
 ## Tech Stack
 
-**Programming language:** Java
+* **Language:** Java 25
+* **Framework:** Spring Boot
+* **Database:** PostgreSQL
+* **Database Versioning:** Flyway
+* **Build Tool:** Maven
 
-**Package manager:** Maven
+---
 
-**Framework:** Springboot
-
-**Database**: Postgresql
-
-**Database versioning**: Flyway
-
-## Current Status
+##  Roadmap & Status
 
 ### Implemented
-
 - [x] Project setup
-- [x] PostgreSQL configuration
+- [x] PostgreSQL configuration 
 - [x] Flyway configuration
 
 ### Currently Working On
+- DTOs and Database Migrations
+- Spring Security integration
+- Spring Web configuration
 
-- DTO's and Migrations
+### Next Tasks
+- [ ] Implement authentication configuration
+- [ ] Create Book CRUD operations
+- [ ] Add functionality to upload and read books
 
-### Next Task
+### Future Features
+- Pomodoro timer
+- Book garden
+- User library
+- Reading streak tracking
+- User profiles
 
-- [x] Fix the database structure
-- [x] Create all the restAPI structure
+---
 
+## Getting Started
 
-## Running TreePages locally
+### Prerequisites
 
-### Requirements
-
-Before running TreePages, make sure you have:
-
+Before running Tree Pages, ensure you have the following installed:
 - Java 25
 - Maven
-- Docker
-- Docker Compose
-- IntelliJ IDEA
+- Docker and Docker Compose
+- IntelliJ IDEA (recommended)
 
-### 1. Clone the repository
+### Installation & Setup
 
+**1. Clone the repository**
 ```bash
-git clone https://github.com/DevPolar003/tree-pages.git
+git clone [https://github.com/DevPolar003/tree-pages.git](https://github.com/DevPolar003/tree-pages.git)
+
 cd tree-pages
-
-
 ```
 
-## 2. Terminal
-
+**2. Start Docker Componse**
 ```bash
-Start the docker:
+
 docker compose up -d
 
-Check if it's working:
 docker compose ps
+
 ```
 
-## 3. Build the project
-Run the project on Intellj Idea and access the endpoints.
+**3. Build and Run the Project**
 
+Open the project in IntelliJ IDEA and run the main application. 
+Once the application starts, you can access 
+the currently available routes in your browser:
 
+    Login: http://localhost:8080/templates/login.html
 
+    Sign Up: http://localhost:8080/templates/signup.html
+
+    Welcome: http://localhost:8080/templates/welcome.html
